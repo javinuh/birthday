@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Beth Ellen' rel='stylesheet'>
+    <title>text animation</title>
+    <style>
+        
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: bisque;
+            
+        
+        }
+        h3{
+        
+            color:darkblue;
+            background-color: azure;
+          
+        }
+        h4{
+            
+            color: rgb(5, 56, 56);
+            text-align: center;
+        }
+        p{
+            text-align: center;
+            font-family: 'Beth Ellen';font-size: 22px;
+        }
+        .wavy{
+            position: relative;
+            -webkit-box-reflect: below -12px linear-gradient( transparent, rgba(0,0,0,0.2));
+        }
+        .wavy span{
+            position: relative;
+            display: inline-block;
+            color:rgb(139, 21, 5);
+            font-size: 1.8em;
+            text-transform: uppercase;
+            animation: animate 2s ease-in-out infinite;
+            animation-delay: calc(0.1s *var(--i));
+        }
+        @keyframes animate{
+            0%{
+                transform: translateY(0px);
+            }
+            20%{
+                transform: translateY(-20px);
+            }
+            40%,100%{
+                transform: translateY(0px);
+            }
+        
+        }
+        
+@keyframes wobble {
+  25% {
+    transform: rotate(4deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+}
+        @keyframes neon {
+  from {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.92), 0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(30, 132, 242, 0.52), 0 0 21px rgba(30, 132, 242, 0.92), 0 0 34px rgba(30, 132, 242, 0.78), 0 0 54px rgba(30, 132, 242, 0.92);
+  }
+  to {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.98), 0 0 30px rgba(202, 228, 225, 0.42), 0 0 12px rgba(30, 132, 242, 0.58), 0 0 22px rgba(30, 132, 242, 0.84), 0 0 38px rgba(30, 132, 242, 0.88), 0 0 60px #1e84f2;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <br>
+    
+    <div class="wavy">
+        <h3>JAVINUH BIRTHDAY WISHES</h3><br><br><br><br><br>
+        <span style="--i:1;">H</span>
+        <span style="--i:2;">A</span>
+        <span style="--i:3;">P</span>
+        <span style="--i:4;">P</span>
+        <span style="--i:5;">Y</span><br>
+  
+        <div class="wavy">
+            <span style="--i:1;">B</span>
+            <span style="--i:2;">I</span>
+            <span style="--i:3;">R</span>
+            <span style="--i:4;">T</span>
+            <span style="--i:5;">H</span>
+            <span style="--i:6;">D</span>
+            <span style="--i:7;">A</span>
+            <span style="--i:8;">Y</span>
+        </div>
+        <div class="wavy">
+            <span style="--i:1;">T</span>
+            <span style="--i:2;">W</span>
+            <span style="--i:3;">I</span>
+            <span style="--i:4;">N</span>
+            <span style="--i:5;"> </span>
+            <span style="--i:6;">B</span>
+            <span style="--i:7;">R</span>
+            <span style="--i:8;">O</span>
+            <span style="--i:9;">T</span>
+            <span style="--i:10;">H</span>
+            <span style="--i:11;">E</span>
+            <span style="--i:12;">R</span>
+            <span style="--i:13;">S</span>
+        </div>
+        <div class="wavy">
+            <span style="--i:1;">H</span>
+            <span style="--i:2;">A</span>
+            <span style="--i:3;">M</span>
+            <span style="--i:4;">D</span>
+            <span style="--i:5;">H</span>
+            <span style="--i:6;">A</span>
+            <span style="--i:7;">N</span>
+            
+        </div>
+        <p style="text-align: center;"><div class="wavy">
+            <span style="--i:1; text-align: center;">&</span>
+        </div></p>
+        <div class="wavy">
+            <span style="--i:1;">N</span>
+            <span style="--i:2;">U</span>
+            <span style="--i:3;">H</span>
+            <span style="--i:4;">M</span>
+            <span style="--i:5;">A</span>
+            <span style="--i:6;">N</span> 
+        </div><br>
+        <h4>Greeting <a href="#">Click here</a></h4>
+        <h4>Image wishes <a href="image.html">Click here</a></h4>
+        <h4>Video wishes <a href="video.html">Click here</a></h4><br><br><br><br>
+       
+        <h4>Developed by<br>MOHAMED JAVITH<br>Founder of javinuh</h4>
+        <p>javith</p>
+
+    </div>
+    
+    
+  
+</body>
+</html>
