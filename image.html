@@ -14,6 +14,10 @@
             background-color: navajowhite;
             justify-content: center;
             align-items: center;
+            min-height: 100vh;
+        }
+        audio{
+          display:none;
         }
         h3{
             background-color: cyan;
@@ -29,11 +33,16 @@
             color: darkmagenta;
         }
         .row{
-            padding:.3em .5em .1em 10em;
+            padding:.4em .6em .2em 8em;
         }
         h5{
             text-align: center;
             color:navy;
+            font-size: 1.2em;
+        }
+        img{
+          margin-left: auto;
+          margin-right: auto;
         }
         * {box-sizing: border-box;}
  
@@ -44,13 +53,17 @@
     margin-right: auto;
   
   }
+  img{
+    width: 250px;
+    height: 300px;
+  }
          /* Slideshow container */
   .slideshow-container {
     max-width: 1000px;
     position: relative;
     margin: auto;
     float: center;
-    padding:.3em .5em .1em 6em;
+    padding:.3em .5em .1em 4em;
   }
  
   /* Caption text */
@@ -108,29 +121,34 @@
 <body>
     <h3>JAVINUH BIRTHDAY WISHES</h3>
     <h4>Wish you many more happy returns of the day machanzz</h4>
+    <audio controls autoplay loop>
+      <source src="bday.ogg" type="audio/ogg">
+      <source src="bday.mp3.mp3" type="audio/mp3">
+     
+    </audio> 
     <div class="slideshow-container">
 
         <div class="mySlides fade">
           <div class="numbertext"></div>
-          <img src="nuhman.jpg"class="center" style="width: 70%;height: 70%;" >
+          <img src="nuhman.jpg"class="center"  >
           <div class="text"></div>
         </div>
         
         <div class="mySlides fade">
           <div class="numbertext"></div>
-          <img src="hamdhan.jpg" class="center"style="width: 70%;height: 70%;">
+          <img src="hamdhan.jpg" class="center">
           <div class="text"></div>
         </div>
         
         <div class="mySlides fade">
           <div class="numbertext"></div>
-          <img src="ham-nuh.jpg" class="center"style="width: 70%;height: 70%;">
+          <img src="ham-nuh.jpg" class="center">
           <div class="text"></div>
         </div>
 
         <div class="mySlides fade">
             <div class="numbertext"></div>
-            <img src="ham-nuh1.jpg" class="center"style="width: 70%;height: 70%;">
+            <img src="ham-nuh1.jpg" class="center">
             <div class="text"></div>
           </div>
 
@@ -138,19 +156,19 @@
 
           <div class="mySlides fade">
             <div class="numbertext"></div>
-            <img src="ham-nuh3.jpg" class="center"style="width: 70%;height: 70%;">
+            <img src="ham-nuh3.jpg" class="center">
             <div class="text"></div>
           </div>
 
           <div class="mySlides fade">
             <div class="numbertext"></div>
-            <img src="ham-nuh4.jpg" class="center"style="width: 70%;height: 70%;">
+            <img src="ham-nuh4.jpg" class="center">
             <div class="text"></div>
           </div>
 
           <div class="mySlides fade">
             <div class="numbertext"></div>
-            <img src="ham-nuh5.jpg" class="center"style="width: 70%;height: 70%;">
+            <img src="ham-nuh5.jpg" class="center">
             <div class="text"></div>
           </div>
         
@@ -180,11 +198,11 @@
             <p>Developer</p><br>
             <div class="row">
                 
-                    <img src="javi.jpg" alt="developer" style="border-radius: 50%;width: 40%;height: 40%;">
+                    <img src="javi.jpg" alt="developer" style="border-radius: 50%;width: 150px;height: 200px;">
                     
                 
             </div>
-            <p style="text-align: center;">MOHAMED JAVITH<br>Founder and CEO of javinuh</p>
+            <p style="text-align: center;">MOHAMED JAVITH<br>Founder and CEO of javinuh<br>javinuh@gmail.com<br>+91 7094783968</p>
             <p><a href="index.html">Back</a></p>
         <script>
             function openNav() {
