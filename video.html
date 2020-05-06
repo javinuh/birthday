@@ -4,11 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Astloch' rel='stylesheet'>
     <title>Video wishes</title>
     <style>
         body
         {
             background-color:navajowhite;
+        }
+        .ml16 {
+            color:darkblue;
+            padding: 40px 0;
+            font-weight: 1200;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 0.5em;
+            overflow: hidden;
+            text-align: center;
+            font-family: 'Astloch';font-size: 22px;
+         }
+
+.ml16 .letter {
+        display: inline-block;
+        line-height: 1em;
         }
         H3{
             text-align: center;
@@ -31,7 +48,7 @@
             font-size: 1.2em;
         }
         .row{
-            padding:.3em .5em .1em 9em;
+            padding:.3em .5em .1em 7.5em;
         }
         video{
             padding:.3em .5em .1em 6em;  
@@ -40,7 +57,9 @@
 </head>
 <body>
     <h3>JAVINUH BIRTHDAY WISHES</h3>
-    <h4>WISH YOU MANY MORE HAPPY RETURNS OF THE DAY<br>MAY ALLAH BLESS YOU</h4><br>
+    <h4>WISH YOU MANY MORE HAPPY RETURNS OF THE DAY<br>MAY ALLAH BLESS YOU</h4>
+    <h1 class="ml16">HAPPY BIRTHDAY</h1>
+
     <video width="50%" height="50%" controls autoplay loop>
         <source src="bvideo.mp4" type="video/mp4">
          <source src="bvideo.ogg" type="video/ogg">
@@ -56,6 +75,27 @@
       </div>
       <p style="text-align: center;">MOHAMED JAVITH<br>Founder and CEO of javinuh<br>javinuh@gmail.com<br>+91 7094783968</p>
       <p><a href="index.html">Back</a></p>
-    
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+        <script>
+            // Wrap every letter in a span
+            var textWrapper = document.querySelector('.ml16');
+            textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+            anime.timeline({loop: true})
+            .add({
+                targets: '.ml16 .letter',
+                translateY: [-100,0],
+                easing: "easeOutExpo",
+                duration: 1400,
+                delay: (el, i) => 30 * i
+            }).add({
+                targets: '.ml16',
+                opacity: 0,
+                duration: 1000,
+                easing: "easeOutExpo",
+                delay: 1000
+            });
+        </script>
 </body>
 </html>
