@@ -6,6 +6,7 @@
     <link href='https://fonts.googleapis.com/css?family=Almendra SC' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Beth Ellen' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Architects Daughter' rel='stylesheet'>
     <title>Image wishes</title>
     <style>
         body{
@@ -19,6 +20,20 @@
         audio{
           display:none;
         }
+            .ml15 {
+      font-weight: 800;
+      font-size: 2em;
+      text-transform: uppercase;
+      letter-spacing: 0.5em;
+      text-align: center;
+      color: blue;
+    }
+
+    .ml15 .word {
+      display: inline-block;
+      line-height: 1em;
+      font-family: 'Architects Daughter';font-size: 22px;
+    }
         h3{
             background-color: cyan;
             text-align: center;
@@ -33,17 +48,14 @@
             color: darkmagenta;
         }
         .row{
-            padding:.4em .6em .2em 8em;
+          padding:.3em .5em .1em 7.5em;
         }
         h5{
             text-align: center;
             color:navy;
             font-size: 1.2em;
         }
-        img{
-          margin-left: auto;
-          margin-right: auto;
-        }
+       
         * {box-sizing: border-box;}
  
   .mySlides {display: none;}
@@ -116,6 +128,7 @@
     from {opacity: .5} 
     to {opacity: 1}
   }
+
     </style>
 </head>
 <body>
@@ -124,8 +137,13 @@
     <audio controls autoplay loop>
       <source src="bday.ogg" type="audio/ogg">
       <source src="bday.mp3" type="audio/mp3">
-     
+       
     </audio> 
+    <h1 class="ml15">
+      <span class="word">HAPPY</span>
+      <span class="word">BIRTHDAY</span>
+    </h1>
+ 
     <div class="slideshow-container">
 
         <div class="mySlides fade">
@@ -198,20 +216,31 @@
             <p>Developer</p><br>
             <div class="row">
                 
-                    <img src="javi.jpg" alt="developer" style="border-radius: 50%;width: 150px;height: 200px;">
+                    <img src="javi.jpg" alt="developer" style="border-radius: 50%;width: 40%;height: 40%;">
                     
                 
             </div>
             <p style="text-align: center;">MOHAMED JAVITH<br>Founder and CEO of javinuh<br>javinuh@gmail.com<br>+91 7094783968</p>
             <p><a href="index.html">Back</a></p>
-        <script>
-            function openNav() {
-              document.getElementById("mySidenav").style.width = "250px";
-            }
-            
-            function closeNav() {
-              document.getElementById("mySidenav").style.width = "0";
-            }
+
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+            <script>
+                anime.timeline({loop: true})
+        .add({
+          targets: '.ml15 .word',
+          scale: [14,1],
+          opacity: [0,1],
+          easing: "easeOutCirc",
+          duration: 800,
+          delay: (el, i) => 800 * i
+        }).add({
+          targets: '.ml15',
+          opacity: 0,
+          duration: 1000,
+          easing: "easeOutExpo",
+          delay: 1000
+        });
             </script>
           <script>
             var slideIndex = 0;
@@ -234,5 +263,6 @@
               setTimeout(showSlides, 2000); // Change image every 2 seconds
             }
             </script>
+
 </body>
 </html>
