@@ -34,20 +34,28 @@
         audio{
           display:none;
         }
-            .ml15 {
-      font-weight: 800;
-      font-size: 2em;
-      text-transform: uppercase;
-      letter-spacing: 0.5em;
-      text-align: center;
-      color: blue;
-    }
+     .ml6 {
+          position: relative;
+          font-weight: 900;
+          font-size: 2.3em;
+          color:rgb(230, 17, 17);
+          font-family: Architects Daughter;
+          text-align: center;
+        }
 
-    .ml15 .word {
-      display: inline-block;
-      line-height: 1em;
-      font-family: 'Architects Daughter';font-size: 22px;
-    }
+     .ml6 .text-wrapper {
+          position: relative;
+          display: inline-block;
+          padding-top: 0.002em;
+          padding-right: 0.05em;
+          padding-bottom: 0.01em;
+          overflow: hidden;
+        }
+
+        .ml6 .letter {
+          display: inline-block;
+          line-height: 1em;
+        }
         
         h4{
             font-family: 'Almendra SC';font-size: 22px;
@@ -61,7 +69,7 @@
         }
         .row{
           position: relative;
-          padding:.3em .5em .1em 7em;
+          padding:.3em .5em .1em 8em;
         }
         h5{
             text-align: center;
@@ -142,6 +150,26 @@
     from {opacity: .5} 
     to {opacity: 1}
   }
+  .button  {
+            padding: 10px 25px;
+            font-size: 12px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: #fff;
+            background-color: rgb(180, 4, 4);
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 7px #999;
+        }
+
+        .button :hover {background-color: #3e8e41}
+
+        .button :active {
+            background-color: #3e8e41;
+            box-shadow: 0 1px #666;
+            transform: translateY(4px);
+        }
 
     </style>
 </head>
@@ -157,10 +185,13 @@
             <source src="bday.mp3" type="audio/mp3">
             
           </audio> 
-          <h1 class="ml15">
-            <span class="word">HAPPY</span>
-            <span class="word">BIRTHDAY</span>
+          <h1 class="ml6">
+            <span class="text-wrapper">
+              <span class="letters">HAPPY BIRTHDAY</span>
+            </span>
           </h1>
+          
+         
       
           <div class="slideshow-container">
 
@@ -230,10 +261,13 @@
 
                   <p style="font-family: 'Beth Ellen';font-size: 22px;color: green;">javith</p>
                   
-                  <h5>Video wishes <a href="video.html">Click here</a></h5>
-                  <h5>Memories<a href="memories.html">Click here</a></h5>
-                  <h5>Greeting <a href="greeting.html">Click here</a></h5>
-                  <h5>Rating <a href="https://forms.gle/47bvJCutYom4vchY6">Click here</a></h5><br>
+                  <h5>Video wishes <a class="button" href="video.html">Click here</a></h5>
+                  <h5>Memories <a class="button" href="memories.html">Click here</a></h5>
+                  <h5>Greeting <a class="button" href="greeting.html">Click here</a></h5>
+                  <p style="font-weight: 600; color:darkmagenta;">Please submit your rating</p>
+                  <h5>Rating <a class="button" href="https://forms.gle/47bvJCutYom4vchY6">Click here</a></h5><br>
+
+                  <!--developer-->
                   <p>Developer</p><br>
                   <div class="row">
                       
@@ -241,28 +275,30 @@
                           
                       
                   </div>
-                  <p style="text-align: center;">MOHAMED JAVITH<br>Founder and CEO of javinuh<br>javinuh@gmail.com<br>+91 7094783968<br><a href="https://javinuh.github.io/javinuh/about.html">OUR TEAM</a></p>
-                  <p><a href="index.html">Back</a></p>
+                  <p style="text-align: center;">MOHAMED JAVITH<br>Founder and CEO of javinuh<br>javinuh@gmail.com<br>+91 7094783968<br><br><a class="button" href="https://javinuh.github.io/javinuh/about.html">OUR TEAM</a></p>
+                    <br><p><a href="index.html">Back</a></p>
          
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+           <script>
+             // Wrap every letter in a span
+          var textWrapper = document.querySelector('.ml6 .letters');
+          textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-            <script>
-                anime.timeline({loop: true})
-        .add({
-          targets: '.ml15 .word',
-          scale: [14,1],
-          opacity: [0,1],
-          easing: "easeOutCirc",
-          duration: 800,
-          delay: (el, i) => 800 * i
-        }).add({
-          targets: '.ml15',
-          opacity: 0,
-          duration: 1000,
-          easing: "easeOutExpo",
-          delay: 1000
-        });
-            </script>
+          anime.timeline({loop: true})
+            .add({
+              targets: '.ml6 .letter',
+              translateY: ["1.1em", 0],
+              translateZ: 0,
+              duration: 750,
+              delay: (el, i) => 50 * i
+            }).add({
+              targets: '.ml6',
+              opacity: 0,
+              duration: 1000,
+              easing: "easeOutExpo",
+              delay: 1000
+            });
+           </script>
           <script>
             var slideIndex = 0;
             showSlides();
