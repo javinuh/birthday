@@ -50,7 +50,7 @@
    position: relative;
    margin: auto;
    float: center;
-   
+   padding:.3em .5em .1em 1em;
  }
 
  /* Caption text */
@@ -109,8 +109,28 @@
      background-color: navy;
      font-family: 'Bungee Shade';font-size: 22px;
  }
+ .button  {
+            padding: 10px 25px;
+            font-size: 12px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: #fff;
+            background-color: rgb(180, 4, 4);
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 7px #999;
+        }
+
+        .button :hover {background-color: #3e8e41}
+
+        .button :active {
+            background-color: #3e8e41;
+            box-shadow: 0 1px #666;
+            transform: translateY(4px);
+        }
  .row{
-    padding:.3em .5em .1em 7em;
+    padding:.3em .5em .1em 8em;
      float: center;
     }
         p{
@@ -280,10 +300,11 @@
         <h5>MAHDHI WASIF</h5>
         </div>
         <div class="list">
-        <h5>Image wishes <a href="image.html">Click here</a></h5>
-        <h5>Video wishes<a href="video.html">Click here</a></h5>
-        <h5>Greeting <a href="greeting.html">Click here</a></h5>
-        <h5>Rating <a href="https://forms.gle/47bvJCutYom4vchY6">Click here</a></h5><br>
+        <h5>Image wishes <a class="button" href="image.html">Click here</a></h5><br>
+        <h5>Video wishes <a class="button" href="video.html">Click here</a></h5><br>
+        <h5>Greeting <a class="button" href="greeting.html">Click here</a></h5><br>
+        <p style="font-weight: 600; color:darkmagenta;">Please submit your rating</p>
+        <h5>Rating <a class="button" href="https://forms.gle/47bvJCutYom4vchY6">Click here</a></h5><br>
     </div>
         <p>Developer</p><br>
         <div class="row">
@@ -292,9 +313,9 @@
                 
             
         </div>
-        <p style="text-align: center;">MOHAMED JAVITH<br>Founder and CEO of javinuh<br>javinuh@gmail.com<br>+91 7094783968<br><a href="https://javinuh.github.io/javinuh/about.html">OUR TEAM</a></p>
+        <p style="text-align: center;">MOHAMED JAVITH<br>Founder and CEO of javinuh<br>javinuh@gmail.com<br>+91 7094783968<br><br><a class="button" href="https://javinuh.github.io/javinuh/about.html">OUR TEAM</a></p>
     <p style="font-family: 'Beth Ellen';font-size: 22px; color: green;">javith<br></p>
-   <p> <a href="index.html" >Back</a></p>
+     <p> <a href="index.html" >Back</a></p>
 
        
                 <script>
